@@ -58,9 +58,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.title.text = self.articles?[indexPath.item].headline
         cell.author.text = self.articles?[indexPath.item].author
         cell.desc.text = self.articles?[indexPath.item].desc
-//        cell.url.text = self.articles?[indexPath.item].url
-//        cell.imageUrl.text = self.articles?[indexPath.item].urlToImage
-        
+        if (self.articles?[indexPath.item].imageUrl != nil) {
+            cell.imgView.downloadImage(from: (self.articles?[indexPath.item].imageUrl!)!)
+        }
         
         return cell
     }
@@ -79,7 +79,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 }
 
-//extension 
+extension UIImageView {
+    func downloadImage(from url:String){
+        let urlRequest = URLRequest(url: URL(string: url)!)
+        let task = URLSession.shared.dataTask(with: urlRequest) { (data,response,error) in
+            if error != nil {
+                print(error)
+                return
+            }
+            DispatchQueue.main.async {
+                self.image = UIImage(data: data!)
+            }
+        }
+        task.resume()
+    }
+}
 
 
 
