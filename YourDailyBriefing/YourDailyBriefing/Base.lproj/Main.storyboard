@@ -37,7 +37,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qc8-c0-Tc0" id="WHZ-bx-HO1">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uJU-H3-JOR">
@@ -119,6 +119,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--Web View View Controller-->
+        <scene sceneID="qaF-9G-pTh">
+            <objects>
+                <viewController storyboardIdentifier="web" id="rje-uJ-XX7" customClass="WebViewViewController" customModule="YourDailyBriefing" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4nh-dT-ouD"/>
+                        <viewControllerLayoutGuide type="bottom" id="1bt-IO-A27"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dPY-nz-gWg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oE1-Hf-8Lr">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.67828040349999996" green="0.73874906709999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <items>
+                                    <navigationItem title="Your Daily Briefing" id="yrF-ok-Cde">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="alN-Ba-Qmp">
+                                            <color key="tintColor" red="0.28909216895458012" green="0.55885686528497414" blue="0.30413516576928562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="UV7-wI-2wi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5c-ss-Scm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                                <color key="backgroundColor" red="0.67828040349999996" green="0.73874906709999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-5u-FN5">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oE1-Hf-8Lr" firstAttribute="top" secondItem="4nh-dT-ouD" secondAttribute="bottom" id="2Sk-Ve-JJO"/>
+                            <constraint firstItem="Uvb-5u-FN5" firstAttribute="leading" secondItem="dPY-nz-gWg" secondAttribute="leading" id="8my-89-Yki"/>
+                            <constraint firstAttribute="trailing" secondItem="Uvb-5u-FN5" secondAttribute="trailing" id="AeY-MP-DXB"/>
+                            <constraint firstItem="j5c-ss-Scm" firstAttribute="top" secondItem="dPY-nz-gWg" secondAttribute="top" id="D0O-eN-lvf"/>
+                            <constraint firstItem="j5c-ss-Scm" firstAttribute="leading" secondItem="dPY-nz-gWg" secondAttribute="leading" id="E8f-kV-xOx"/>
+                            <constraint firstItem="oE1-Hf-8Lr" firstAttribute="leading" secondItem="dPY-nz-gWg" secondAttribute="leading" id="EOL-Rq-qwx"/>
+                            <constraint firstItem="Uvb-5u-FN5" firstAttribute="top" secondItem="oE1-Hf-8Lr" secondAttribute="bottom" id="Leq-6d-nRv"/>
+                            <constraint firstItem="1bt-IO-A27" firstAttribute="top" secondItem="Uvb-5u-FN5" secondAttribute="bottom" id="NID-Vx-zWD"/>
+                            <constraint firstAttribute="trailing" secondItem="oE1-Hf-8Lr" secondAttribute="trailing" id="RYf-RW-r3D"/>
+                            <constraint firstItem="Uvb-5u-FN5" firstAttribute="top" secondItem="oE1-Hf-8Lr" secondAttribute="bottom" id="pC7-W9-A7k"/>
+                            <constraint firstAttribute="trailing" secondItem="j5c-ss-Scm" secondAttribute="trailing" id="rZy-RH-zEv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="WebView" destination="Uvb-5u-FN5" id="7vp-Oz-Q72"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FwW-qo-ga5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.39999999999998" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

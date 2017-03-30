@@ -16,6 +16,7 @@
 		0D1EBE191E8B5019008EA5C6 /* YourDailyBriefingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EBE181E8B5019008EA5C6 /* YourDailyBriefingUITests.swift */; };
 		0D1EBE271E8B56E2008EA5C6 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EBE261E8B56E2008EA5C6 /* ArticleCell.swift */; };
 		0D1EBE291E8B5964008EA5C6 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1EBE281E8B5964008EA5C6 /* Article.swift */; };
+		0D21C1331E8C7D4500CF6B84 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D21C1321E8C7D4500CF6B84 /* WebViewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 /* Begin PBXFileReference section */
 		0D1EBDF51E8B5018008EA5C6 /* YourDailyBriefing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourDailyBriefing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D1EBDF81E8B5018008EA5C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D1EBDFA1E8B5018008EA5C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D1EBDFA1E8B5018008EA5C6 /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D1EBDFD1E8B5018008EA5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D1EBDFF1E8B5018008EA5C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D1EBE021E8B5018008EA5C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		0D1EBE1A1E8B5019008EA5C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D1EBE261E8B56E2008EA5C6 /* ArticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		0D1EBE281E8B5964008EA5C6 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		0D21C1321E8C7D4500CF6B84 /* WebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				0D1EBE041E8B5018008EA5C6 /* Info.plist */,
 				0D1EBE261E8B56E2008EA5C6 /* ArticleCell.swift */,
 				0D1EBE281E8B5964008EA5C6 /* Article.swift */,
+				0D21C1321E8C7D4500CF6B84 /* WebViewViewController.swift */,
 			);
 			path = YourDailyBriefing;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D21C1331E8C7D4500CF6B84 /* WebViewViewController.swift in Sources */,
 				0D1EBE291E8B5964008EA5C6 /* Article.swift in Sources */,
 				0D1EBDFB1E8B5018008EA5C6 /* ViewController.swift in Sources */,
 				0D1EBDF91E8B5018008EA5C6 /* AppDelegate.swift in Sources */,
@@ -522,6 +526,7 @@
 				0D1EBE1F1E8B5019008EA5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D1EBE201E8B5019008EA5C6 /* Build configuration list for PBXNativeTarget "YourDailyBriefingTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				0D1EBE221E8B5019008EA5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D1EBE231E8B5019008EA5C6 /* Build configuration list for PBXNativeTarget "YourDailyBriefingUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				0D1EBE251E8B5019008EA5C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
