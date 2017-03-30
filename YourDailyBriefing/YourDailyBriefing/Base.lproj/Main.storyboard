@@ -26,7 +26,13 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="barTintColor" red="0.67828040349999996" green="0.73874906709999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <items>
-                                    <navigationItem title="Your Daily Briefing" id="Zst-8e-tIb"/>
+                                    <navigationItem title="Your Daily Briefing" id="Zst-8e-tIb">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="b0u-Wu-B2L">
+                                            <connections>
+                                                <action selector="menuPressed:" destination="BYZ-38-t0r" id="5Sc-Nk-8LC"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="220" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C7b-2o-w22">
@@ -92,9 +98,12 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="dLd-I5-Ie3"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYn-bK-pUD">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uYn-bK-pUD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" red="0.6782804035092711" green="0.73874906709983201" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="GR0-fu-hQZ"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,7 +147,6 @@
                                 <items>
                                     <navigationItem title="Your Daily Briefing" id="yrF-ok-Cde">
                                         <barButtonItem key="leftBarButtonItem" title="Back" style="done" id="alN-Ba-Qmp">
-                                            <color key="tintColor" red="0.28909216895458012" green="0.55885686528497414" blue="0.30413516576928562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
                                                 <segue destination="BYZ-38-t0r" kind="show" id="UV7-wI-2wi"/>
                                             </connections>
@@ -146,9 +154,12 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j5c-ss-Scm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5c-ss-Scm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" red="0.67828040349999996" green="0.73874906709999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Scs-dv-yNu"/>
+                                </constraints>
                             </view>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uvb-5u-FN5">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>

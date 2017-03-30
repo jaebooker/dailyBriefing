@@ -13,14 +13,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var articles: [Article]? = []
+   var source = "al-jazeera-english"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchArticles()
+      fetchArticles(fromSource: source)
         // Do any additional setup after loading the view, typically from a nib.
     }
-    func fetchArticles() {
-        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=al-jazeera-english&sortBy=top&apiKey=b436bdc86f4f4ca99da117017a0f9936")!)
+   func fetchArticles(fromSource provider: String) {
+        let urlRequest = URLRequest(url: URL(string: "https://newsapi.org/v1/articles?source=\(provider)&sortBy=top&apiKey=b436bdc86f4f4ca99da117017a0f9936")!)
         let task = URLSession.shared.dataTask(with: urlRequest) { (data, response,error) in
             if error != nil {
                 print(error)
@@ -80,7 +81,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+   let menuManager = MenuManager()
+   @IBAction func menuPressed(_ sender: Any) {
+      menuManager.openMenu()
+      menuManager.mainVC = self
+   }
 
 }
 
